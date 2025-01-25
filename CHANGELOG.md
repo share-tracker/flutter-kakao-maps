@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Configure how to initialize the map.
+
 ## 1.0.4
 
 - Fix error when layer is null

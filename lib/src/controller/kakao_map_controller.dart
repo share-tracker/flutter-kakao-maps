@@ -120,7 +120,7 @@ class KakaoMapController {
   }
 
   Future removeAllShapePolygon() async {
-    await _viewMethodChannel.invokeMethod('removeAllShapePolygon');
+    await _viewMethodChannel.invokeMethod('removeAllShapePolygon', {});
   }
 
   /// 카메라 이동
