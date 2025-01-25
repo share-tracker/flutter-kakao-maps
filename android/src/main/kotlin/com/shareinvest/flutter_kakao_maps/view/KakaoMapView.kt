@@ -173,7 +173,7 @@ internal class KakaoMapView(
             RouteLineOptions.from(segment).setStylesSet(stylesSet)
         )
 
-        if (layer.lineId.isNullOrEmpty()) {
+        if (layer == null || layer.lineId.isNullOrEmpty()) {
             result.success(null)
 
             return
