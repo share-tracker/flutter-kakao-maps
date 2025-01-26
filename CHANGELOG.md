@@ -1,3 +1,9 @@
+## 1.0.7
+
+- Fixed the Swift compiler issue where attributes like @preconcurrency were incorrectly applied to types.
+
+- The @preconcurrency attribute has been properly applied only to declarations, resolving the compilation error.
+
 ## 1.0.6
 
 - Prevents cases where the layer is null.

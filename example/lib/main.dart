@@ -1,24 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_kakao_map_api/flutter_kakao_maps.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 import 'package:screenshot/screenshot.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  if (kDebugMode) {
-    await dotenv.load(fileName: '.env');
-
-    KakaoMapsSDK.instance.init(
-      appKey: dotenv.env['NATIVE']!,
-      debug: kDebugMode,
-    );
-    print(await KakaoSdk.origin);
-  }
+  KakaoMapsSDK.instance.init(
+    appKey: 'YOUR NATIVE API KEY',
+    debug: kDebugMode,
+  );
   runApp(const MyApp());
 }
 

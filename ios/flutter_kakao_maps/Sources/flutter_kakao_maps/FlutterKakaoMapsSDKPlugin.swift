@@ -2,7 +2,7 @@
 import KakaoMapsSDK
 
 @MainActor
-public class FlutterKakaoMapsPlugin: NSObject, @preconcurrency FlutterPlugin {
+public class FlutterKakaoMapsPlugin: NSObject, FlutterPlugin {
     private static var registrar: FlutterPluginRegistrar!
     
     private static let BASE_ID = "com.shareinvest.flutter_kakao_maps"
@@ -22,8 +22,10 @@ public class FlutterKakaoMapsPlugin: NSObject, @preconcurrency FlutterPlugin {
     internal static func getAssetPath(named: String) -> String {
         let key = registrar.lookupKey(forAsset: named)
         let mainBundle = Bundle.main
-        let path = mainBundle.path(forResource: key, ofType: nil)!
-        
+
+        guard let path = mainBundle.path(forResource: key, ofType: nil) else {
+            fatalError("Asset with name \(named) not found.")
+        }        
         return path
     }
     

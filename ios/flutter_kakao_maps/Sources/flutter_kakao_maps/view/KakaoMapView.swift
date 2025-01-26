@@ -2,7 +2,7 @@
 import KakaoMapsSDK
 
 @MainActor
-class KakaoMapView: NSObject, @preconcurrency FlutterPlatformView, @preconcurrency MapControllerDelegate, KakaoMapEventDelegate {
+class KakaoMapView: NSObject, FlutterPlatformView, MapControllerDelegate, KakaoMapEventDelegate {
     private let mapViewContainer: KMViewContainer
     private let mapController: KMController
     private var mapView: KakaoMap?

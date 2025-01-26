@@ -2,7 +2,7 @@ name: flutter_kakao_map_api
 description: KakaoMapsSDK for Flutter
 homepage: https://github.com/share-tracker
 repository: https://github.com/share-tracker/flutter-kakao-maps
-version: 1.0.6
+version: 1.0.7
 
 environment:
   sdk: ">=3.1.0 <4.0.0"
